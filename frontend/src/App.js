@@ -1,11 +1,4 @@
-
-import React from 'react';
-
-function App() {
-  return (
-    <div style={{ textAlign: 'center', marginTop: '5rem' }}>
-      <h1>Welcome to Piñata Bust</h1>
-      import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function App() {
   const [leaderboard, setLeaderboard] = useState([]);
@@ -20,17 +13,13 @@ function App() {
   return (
     <div style={{ textAlign: 'center', marginTop: '5rem' }}>
       <h1>Welcome to Piñata Bust</h1>
-      <h3>Leaderboard:</h3>
+      <h2>Leaderboard</h2>
       <ul>
-        {leaderboard.map((entry, i) => (
-          <li key={i}>{entry.name}: {entry.score}</li>
+        {leaderboard.length === 0 && <li>No scores yet</li>}
+        {leaderboard.map((entry, index) => (
+          <li key={index}>{entry.name}: {entry.score}</li>
         ))}
       </ul>
-    </div>
-  );
-}
-
-export default App;
     </div>
   );
 }
