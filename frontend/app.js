@@ -1,0 +1,1 @@
+console.log('Piñata Bust frontend loaded');
